@@ -175,16 +175,16 @@ console.log('declaration')
 */
 
 //CODE HERE
-let name2 = ''
-let nameCheck = (name2) => {
-  if (name2 = "Steven"){
-  console.log("What is up, Steven")
-} else if (name2 = "Bryan"){
-  console.log("Hi, Bryan")
-} else console.log(`Cool name, ${name2}`)
+
+let nameCheck = name => {
+  if (name === "Steven"){
+  return "What is up, Steven"
+} else if (name === "Bryan"){
+  return "Hi, Bryan!"
+} else return `Cool name, ${name}`
 }
 let nameGreeting = nameCheck("Randy")
-
+console.log(nameGreeting)
 
 ////////////////// PROBLEM 11 ////////////////////
 /*
@@ -197,8 +197,19 @@ let nameGreeting = nameCheck("Randy")
 */
 
 //CODE HERE
-
-
+const faveColorFinder = color => {
+  if(color === 'red') {
+    return "Red is a great color"
+  } else if (color === 'green') {
+  return 'Green is a solid favorite color'
+} else if (color === "black"){
+  return  "So trendy!"
+}else {
+  return "Re-evaluate your color choice"
+}
+}
+let colorRating = faveColorFinder('black')
+console.log(colorRating)
 ////////////////// PROBLEM 12 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 /*
@@ -209,12 +220,12 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 
 //CODE HERE
 
-let printAllNames = (arr) => {
+let printAllNames = arr => {
   for (i=0; i < arr.length; i++) {
-    return arr
+    console.log(arr[i])
   }
 }
-console.log(printAllNames(namesArr))
+printAllNames(namesArr)
 ////////////////// PROBLEM 13 ////////////////////
 /*
   Create a function called thatsOdd that takes in a single argument (a number).
