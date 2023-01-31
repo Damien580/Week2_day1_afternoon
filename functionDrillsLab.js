@@ -338,16 +338,27 @@ console.log(emailCheck('damien@gmail.com'))
 */
 
 //CODE HERE
-
-
+let price = 3
+let frogs = gold => {
+  while (gold / price > 0){
+    return gold / price
+  }
+}
+ let totalFrogs = frogs(67)
+ console.log(totalFrogs)
 ////////////////// PROBLEM 20 ////////////////////
 /*
   You might have noticed a slight bug in the previous problem. If you were to pass in 4 gold, the function would return to you 1.3333... However, you can't really go to a store and by 1.333 products. You would just be able to purchase 1 product. Re-write the function you used in the previous problem (give it the same name, just add a 2 to the end of it) that fixes this bug. Invoke the function and store the returned value to a variable called `totalFrogs2`.
 */
 
 //CODE HERE
-
-
+let frogs2 = gold => {
+  while (gold / price > 0){
+    return Math.floor(gold / price)
+  }
+}
+let totalFrogs2 = frogs2(67)
+console.log(totalFrogs2)
 ////////////////// PROBLEM 21 ////////////////////
 let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 /*
@@ -356,7 +367,15 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 
 //CODE HERE
 
-
+let arrSample = arr =>{
+  for (i=0; i < arr.length; i++){
+    if (arr[i] < arr[i] + 1){
+      return 'true'
+    } else return 'false'
+  }
+}
+let tryMe = (arrSample(sampleArray))
+console.log(tryMe)
 ////////////////// PROBLEM 22 ////////////////////
 
 let duck = "cute";
@@ -379,13 +398,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ['duck']
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ['rubberDuck, sailorDuck']
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ['sailorDuck']
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = ['realduck']
