@@ -275,11 +275,12 @@ let bigOrSmall = (arr) => {
       answers.push('big')
     } else if(arr[i] <= 100){
        answers.push('small')
-      console.log(answers)
+      }
     }
-    }
+    return answers
   }
-  console.log(bigOrSmall(bigOrSmallArray))
+  let arrayEvaluator = (bigOrSmall(bigOrSmallArray))
+  console.log(arrayEvaluator)
   
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
@@ -292,7 +293,7 @@ let loser = 'Glimmer'
 //CODE HERE
 const theEliminator = (param1,param2) => {
   for (i=0; i < param1.length; i++){
-    if (param1[i] = param2){
+    if (param1[i].includes(param2)){
       contestants.splice([i],1)
       return contestants
     }
@@ -307,8 +308,11 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+const newString = str => {
+  console.log(str.toUpperCase())
+}
 
-
+newString(sampleString)
 ////////////////// PROBLEM 18 ////////////////////
 /*
   Write a function called emailCheck that takes in
@@ -319,6 +323,13 @@ let sampleString = "Hi, my name is Kylo."
   If it does, return 'email verified' and if doesn't, 
   return 'must provide a valid email address'
 */
+const emailCheck = email =>{
+ String(email).trim
+ if (email.includes('\@')){
+  return 'email verified'
+ } else return 'must provide a valid email address'
+}
+console.log(emailCheck('damien@gmail.com'))
 
 ////////////////// PROBLEM 19 ////////////////////
 /*
