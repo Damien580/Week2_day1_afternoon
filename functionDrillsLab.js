@@ -235,8 +235,12 @@ printAllNames(namesArr)
 */
 
 //CODE HERE
-
-
+const thatsOdd = num => {
+  if (num % 2 === 0){
+    return 'That\'s not odd!'
+  } else return 'That\'s odd indeed!'
+}
+console.log(thatsOdd(692))
 ////////////////// PROBLEM 14 ////////////////////
 
 /*
@@ -248,7 +252,8 @@ printAllNames(namesArr)
 */
 
 //CODE HERE
-
+const bestMovie = str => {return `${str} is the best movie ever!`}
+console.log(bestMovie('Top Gun'))
 
 ////////////////// PROBLEM 15 ////////////////////
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
@@ -263,7 +268,19 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 
 //CODE HERE
 
-
+let bigOrSmall = (arr) => {
+  let answers = []
+  for (i=0; i < arr.length; i++){
+    if (arr[i] > 100){
+      answers.push('big')
+    } else if(arr[i] <= 100){
+       answers.push('small')
+      console.log(answers)
+    }
+    }
+  }
+  console.log(bigOrSmall(bigOrSmallArray))
+  
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
 let loser = 'Glimmer'
@@ -273,8 +290,15 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
-
-
+const theEliminator = (param1,param2) => {
+  for (i=0; i < param1.length; i++){
+    if (param1[i] = param2){
+      contestants.splice([i],1)
+      return contestants
+    }
+  }
+}
+console.log(theEliminator(contestants,loser))
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo."
 /*
